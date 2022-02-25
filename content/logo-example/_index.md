@@ -3,6 +3,9 @@ title = "Logo presentation example"
 outputs = ["Reveal"]
 [logo]
 src = "images/cwc-logo.png"
+[reveal_hugo]
+custom_theme = "custom-theme.scss"
+custom_theme_compile = true
 +++
 
 
@@ -10,6 +13,10 @@ src = "images/cwc-logo.png"
 # GitHub - More than just a Git repository
 
 ###### Chris Reddington | [@reddobowen](https://twitter.com/reddobowen)
+
+{{% note %}}
+Don't forget to thank the audience.
+{{% /note %}}
 
 ---
 
@@ -43,8 +50,8 @@ Beginner / Intermediate / Advanced
 - Understand how (and why) [cloudwithchris.com](https://www.cloudwithchris.com) is deployed using GitHub Actions
 
 ---
-<!-- _header: "" -->
-<!-- _footer: "" -->
+
+{{% section %}}
 
 # A history...
 ![bg right:40%](images/octocat-days.png)
@@ -55,8 +62,6 @@ Beginner / Intermediate / Advanced
 - Jan 2019 - GitHub offers unlimited private repositories to all plans, including free accounts (but up to three collaborators per repository).
 
 ---
-<!-- _header: "" -->
-<!-- _footer: "" -->
 
 # A history...
 ![bg left:40%](images/octocat-days.png)
@@ -64,6 +69,8 @@ Beginner / Intermediate / Advanced
 - Sept 2019 - GitHub acquired Semmle, a code analysis tool.
 - March 2020 - GitHub announced that they were acquiring npm
 - April 2020 - The free plan allows unlimited collaborators, but limit private repos to 2000 minutes of GitHub Actions per month
+
+{{% /section %}}
 
 ---
 
@@ -87,14 +94,16 @@ GitHub is much more than just Git repositories.
 
 
 ---
-<!-- _class: invert -->
 # Stop! Demo time.
+
 
 ---
 
+{{% section %}}
+
 # GitHub Actions Workflow Schema
 
-```yaml
+```yaml{2-5|11-14}
 name:
   on:
     push:
@@ -113,14 +122,14 @@ jobs:
 	   ……
   build:
     needs: linter
-  ……                                                                                                    
+  …… 
 ```
 
 ---
 
 # GitHub Actions Workflow Schema
 
-```yaml
+```yaml{2-4|7-18}
 …
 publish:  
   environment:
@@ -143,6 +152,8 @@ publish:
       inlineScript: |
         az storage blob upload-batch --account-name cloudwithchrispreview -d '$web/${{ github.head_ref }}' -s 'website'
 ```
+
+{{% /section %}}
 
 ---
 

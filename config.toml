@@ -4,6 +4,13 @@ title = 'My New Hugo Site'
 
 theme = "reveal-hugo"
 
+[params.reveal_hugo]
+highlight_theme = "github"
+load_default_plugins = true
+
+[markup.highlight]
+codeFences = false
+
 [markup.goldmark.renderer]
 unsafe = true
 

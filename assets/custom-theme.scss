@@ -11,7 +11,7 @@ $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: capitalize;
+$headingTextTransform: none;
 $linkColor: #FFFFFF;
 $linkColorHover: darken( $linkColor, 25% );
 $selectionBackgroundColor: darken( $linkColor, 25% );
@@ -23,6 +23,22 @@ $heading4Size: 0.9em;
 
 .reveal h1, h2, h3, h4, h5, h6 {
 	text-align: left;
+}
+
+section.left-align * {
+	text-align: left;
+}
+
+section.left-align ul, section.left-align li {
+	display: inherit;
+	list-style-type: disc;
+}
+
+.container{
+  display: flex;
+}
+.col {
+  flex: 1;
 }
 
 @import "reveal-js/dist/theme/template/theme";

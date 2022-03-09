@@ -11,7 +11,7 @@ transition = "none"
 
 {{< slide class="left-align" >}}
 
-![GitHub](images/github.png)
+![GitHub](images/GitHub.png)
 # GitHub - Not just a Git repository
 
 ###### Chris Reddington | [@reddobowen](https://twitter.com/reddobowen)

@@ -90,7 +90,7 @@ jobs:
           contents: read
     steps:
       - name: 'Download Website Artifact'
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v3
         with:
           name: website
       - name: 'Az CLI Login via OIDC'
@@ -133,7 +133,7 @@ jobs:
           contents: read
     steps:
       - name: 'Download Website Artifact'
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v3
         with:
           name: website
       - name: 'Az CLI Login via OIDC'

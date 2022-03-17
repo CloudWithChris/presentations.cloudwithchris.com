@@ -74,7 +74,7 @@ jobs:
       run: hugo --minify 
       if: ${{ github.ref != 'refs/heads/main' }}
     - name: 'Upload Generated Static Content as Website Artifact'
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: website
         path: ${{ github.workspace }}/public

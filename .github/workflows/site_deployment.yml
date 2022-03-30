@@ -93,7 +93,7 @@ jobs:
     with:
       friendly_environment: Preview
       github_environment: staging.azure
-      swa_name: cwc-static
+      swa_name: cwc-presentation
     secrets:
       CWC_API_KEY: ${{ secrets.CWC_API_KEY }}
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
@@ -110,7 +110,7 @@ jobs:
     with:
       friendly_environment: Prod
       github_environment: production.azure
-      swa_name: cwc-static
+      swa_name: cwc-presentation
     secrets:
       CWC_API_KEY: ${{ secrets.CWC_API_KEY }}
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}

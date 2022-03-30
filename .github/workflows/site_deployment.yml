@@ -14,6 +14,7 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+  workflow_dispatch:
 
 # The workflow has several phases. Phases 1, 2 and 3 run on a push, or if the pull request activity
 # type is not 'closed'.

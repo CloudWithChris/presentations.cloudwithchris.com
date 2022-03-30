@@ -73,105 +73,81 @@ jobs:
     - name: 'Build and Minify Hugo Contents'
       run: hugo --minify 
       if: ${{ github.ref != 'refs/heads/main' }}
+    - name: 'Zip the artifact'
+      run: |
+        cd "${{ github.workspace }}"
+        zip -r website.zip public
     - name: 'Upload Generated Static Content as Website Artifact'
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.0.0
       with:
-        name: website
-        path: ${{ github.workspace }}/public
-  deploy_preview:  
+        name: website_zip
+        path: ${{ github.workspace }}/website.zip
+  deploy_preview:
     if: (github.event.pull_request.head.repo.full_name == github.repository && github.event.action != 'closed')
-    runs-on: ubuntu-latest
     needs: [compressor, build]
-    name: Deploy (Preview)
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+    uses: CloudWithChris/cloudwithchris.com/.github/workflows/reusable-swa-deploy.yaml@main
+    with:
+      friendly_environment: Preview
+      github_environment: staging.azure
+      swa_name: cwc-static
+    secrets:
+      CWC_API_KEY: ${{ secrets.CWC_API_KEY }}
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      githubtoken: ${{ secrets.GITHUB_TOKEN }}
+  prod:
+    if: github.event_name == 'push' || github.event_name == 'schedule'
+    needs: [build]
+    permissions:
+      id-token: write
+      contents: read
+    uses: CloudWithChris/cloudwithchris.com/.github/workflows/reusable-swa-deploy.yaml@main
+    with:
+      friendly_environment: Prod
+      github_environment: production.azure
+      swa_name: cwc-static
+    secrets:
+      CWC_API_KEY: ${{ secrets.CWC_API_KEY }}
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      githubtoken: ${{ secrets.GITHUB_TOKEN }}
+  close_pull_request_job:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.action == 'closed'
     environment:
       name: staging.azure
     permissions:
-          id-token: write
-          contents: read
-    steps:
-      - name: 'Download Website Artifact'
-        uses: actions/download-artifact@v3
-        with:
-          name: website
-      - name: 'Az CLI Login via OIDC'
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: "Add a mask to the SWA Token"
-        uses: azure/CLI@v1
-        with:
-          azcliversion: ${{ env.AZURE_CLI_VERSION }}
-          inlineScript: |
-            echo "::add-mask::$(az staticwebapp secrets list -n ${{ env.SWA_NAME }} | jq -r '.properties.apiKey')"
-      - name: "Get SWA Token"
-        uses: azure/CLI@v1
-        with:
-          azcliversion: ${{ env.AZURE_CLI_VERSION }}
-          inlineScript: |
-            echo "SWA_TOKEN=$(az staticwebapp secrets list -n ${{ env.SWA_NAME }} | jq -r '.properties.apiKey')" >> $GITHUB_ENV
-      - name: Build And Deploy
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ env.SWA_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          action: 'upload'
-          app_location: 'website'
-          skip_app_build: true
-  deploy_prod:  
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    needs: [build]
-    name: Deploy (Prod)
-    environment:
-      name: production.azure
-      url: https://presentations.cloudwithchris.com  
-    permissions:
-          id-token: write
-          contents: read
-    steps:
-      - name: 'Download Website Artifact'
-        uses: actions/download-artifact@v3
-        with:
-          name: website
-      - name: 'Az CLI Login via OIDC'
-        uses: azure/login@v1
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: "Get SWA Token"
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.33.0
-          inlineScript: |
-            echo "::add-mask::$(az staticwebapp secrets list -n ${{ env.SWA_NAME }} | jq -r '.properties.apiKey')"
-      - name: "Get SWA Token"
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.33.0
-          inlineScript: |
-            echo "SWA_TOKEN=$(az staticwebapp secrets list -n ${{ env.SWA_NAME }} | jq -r '.properties.apiKey')" >> $GITHUB_ENV
-      - name: Build And Deploy
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ env.SWA_TOKEN }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          action: 'upload'
-          app_location: 'website'
-          skip_app_build: true
-  # A set of steps used to close old staging sites that are no longer needed, as the PR has now been merged.
-  close_pull_request_job:
-    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.action == 'closed'
+      id-token: write
+      contents: read
     runs-on: ubuntu-latest
     name: Close Pull Request Job
     steps:
+      - name: 'Az CLI Login via OIDC'
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: "Mask SWA Token"
+        uses: azure/CLI@v1
+        with:
+          azcliversion: ${{ env.AZURE_CLI_VERSION }}
+          inlineScript: |
+            echo "::add-mask::$(az staticwebapp secrets list -n ${{ env.SWA_NAME }} | jq -r '.properties.apiKey')"
+      - name: "Get SWA Token"
+        uses: azure/CLI@v1
+        with:
+          azcliversion: ${{ env.AZURE_CLI_VERSION }}
+          inlineScript: |
+            echo "SWA_TOKEN=$(az staticwebapp secrets list -n ${{ env.SWA_NAME }} | jq -r '.properties.apiKey')" >> $GITHUB_ENV
       - name: Close Pull Request
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.STATIC_WEB_APP_TOKEN }}
+          azure_static_web_apps_api_token: ${{ env.SWA_TOKEN }}
           action: 'close'

@@ -61,8 +61,7 @@ jobs:
     steps:            
     - uses: actions/checkout@v3
       with:
-        submodules: 'true'
-        token: ${{ secrets.PAT_TOKEN }}
+        submodules: 'recursive'
     - name: 'Setup Hugo on Runner'
       uses: peaceiris/actions-hugo@v2
       with:

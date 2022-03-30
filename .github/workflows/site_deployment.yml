@@ -35,9 +35,9 @@ on:
 
 # Environment variables used for consistency across the workflow.
 env:
-  HUGO_VERSION: '0.92.2'
+  HUGO_VERSION: '0.96.0'
   SWA_NAME: 'cwc-presentation'
-  AZURE_CLI_VERSION: '2.33.0'
+  AZURE_CLI_VERSION: '2.34.1'
 
 jobs:
   # A set of steps used to compress the images, making sure that images are compressed ahead of publishing to the site.

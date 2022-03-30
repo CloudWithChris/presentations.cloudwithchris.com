@@ -89,13 +89,12 @@ jobs:
       id-token: write
       contents: read
       pull-requests: write
-    uses: CloudWithChris/cloudwithchris.com/.github/workflows/reusable-swa-deploy.yaml@main
+    uses: CloudWithChris/Reusable-Workflows/.github/workflows/azure-staticwebapp-deploy.yaml@main
     with:
       friendly_environment: Preview
       github_environment: staging.azure
       swa_name: cwc-presentation
     secrets:
-      CWC_API_KEY: ${{ secrets.CWC_API_KEY }}
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
@@ -106,13 +105,12 @@ jobs:
     permissions:
       id-token: write
       contents: read
-    uses: CloudWithChris/cloudwithchris.com/.github/workflows/reusable-swa-deploy.yaml@main
+    uses: CloudWithChris/Reusable-Workflows/.github/workflows/azure-staticwebapp-deploy.yaml@main
     with:
       friendly_environment: Prod
       github_environment: production.azure
       swa_name: cwc-presentation
     secrets:
-      CWC_API_KEY: ${{ secrets.CWC_API_KEY }}
       AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}

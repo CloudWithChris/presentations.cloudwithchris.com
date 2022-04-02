@@ -132,6 +132,7 @@ transition = "none"
 ---
 
 {{% section %}}
+
 {{% note %}}
 Deploy static content to a cloud-based storage service that can deliver them directly to the client. This can reduce the need for potentially expensive compute instances.
 {{% /note %}}
@@ -211,6 +212,7 @@ Deploy static content to a cloud-based storage service that can deliver them dir
 </div>
 
 {{% /section %}}
+
 ---
 {{< slide class="left-align" >}}
 

@@ -137,15 +137,13 @@ transition = "none"
 Deploy static content to a cloud-based storage service that can deliver them directly to the client. This can reduce the need for potentially expensive compute instances.
 {{% /note %}}
 
-# Static Content Hosting Pattern
+# Static Content Hosting Pattern is useful when...
 
 <div class="container">
   <div class="col">
     <img src="images/static-content-hosting.png" />
   </div>
   <div class="col">
-  This pattern is useful when:
-
   <ul>
     <li>Wanting to minimise the cost of hosting static resources from expensive compute platforms (e.g. images for a dynamic website, or an entire website that is static in nature)</li>
     <li>Making content accessible across geographical regions by using Content Delivery Networks (CDNs).</li>
@@ -159,15 +157,13 @@ Deploy static content to a cloud-based storage service that can deliver them dir
 Deploy static content to a cloud-based storage service that can deliver them directly to the client. This can reduce the need for potentially expensive compute instances.
 {{% /note %}}
 
-# Static Content Hosting Pattern
+# Static Content Hosting Pattern may not be useful when...
 
 <div class="container">
   <div class="col">
     <img src="images/static-content-hosting.png" />
   </div>
   <div class="col">
-
-  This pattern may not be useful when:
   <ul>
     <li>The content is dynamic in nature (e.g. needs to add some additional information before serving the result to client)</li>
     <li>If using this alongside a compute platform and offloading a small amount of static content, is the work/re-architecture worth the reward?</li>
@@ -177,12 +173,10 @@ Deploy static content to a cloud-based storage service that can deliver them dir
 
 ---
 
-# Static Content Hosting Pattern
+# Static Content Hosting Pattern Additional Considerations
 
 <div class="container">
   <div class="col">
-  Additional considerations:
-
   <ul>
     <li>The Static Content must be exposed over an HTTP/HTTPS endpoint so that it can be accessed</li>
     <li>If some content shouldn’t be available anonymously, consider leveraging the Valet Key pattern (e.g. Shared Access Signatures in Storage Accounts)</li>
@@ -195,15 +189,13 @@ Deploy static content to a cloud-based storage service that can deliver them dir
 
 ---
 
-# Static Content Hosting Pattern
+# Static Content Hosting Pattern Additional Considerations
 
 <div class="container">
   <div class="col">
-  Additional considerations:
-
   <ul>
-    <li>To protect the origin and minimise latency (improving performance) for end users, consider adopting a CDN in front of your static storage, which is where the clients will connect.</li>
-    <li>If you are using this pattern in combination with additional compute platforms to host your application, consider the overall deployment lifecycle (additional complexity?) and dependencies between the two.</li>
+    <li>Adopt a CDN to protect the origin and minimise latency (improving performance) for end users</li>
+    <li>Consider additional complexity & deployment lifecycle if using this pattern in combination with additional compute platforms</li>
   </ul>
   </div>
   <div class="col">

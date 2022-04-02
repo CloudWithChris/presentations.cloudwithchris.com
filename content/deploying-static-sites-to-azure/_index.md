@@ -131,6 +131,7 @@ transition = "none"
 
 ---
 
+{{% section %}}
 {{% note %}}
 Deploy static content to a cloud-based storage service that can deliver them directly to the client. This can reduce the need for potentially expensive compute instances.
 {{% /note %}}
@@ -148,6 +149,22 @@ Deploy static content to a cloud-based storage service that can deliver them dir
     <li>Wanting to minimise the cost of hosting static resources from expensive compute platforms (e.g. images for a dynamic website, or an entire website that is static in nature)</li>
     <li>Making content accessible across geographical regions by using Content Delivery Networks (CDNs).</li>
   </ul>
+  </div>
+</div>
+
+---
+
+{{% note %}}
+Deploy static content to a cloud-based storage service that can deliver them directly to the client. This can reduce the need for potentially expensive compute instances.
+{{% /note %}}
+
+# Static Content Hosting Pattern
+
+<div class="container">
+  <div class="col">
+    <img src="images/static-content-hosting.png" />
+  </div>
+  <div class="col">
 
   This pattern may not be useful when:
   <ul>
@@ -168,6 +185,22 @@ Deploy static content to a cloud-based storage service that can deliver them dir
   <ul>
     <li>The Static Content must be exposed over an HTTP/HTTPS endpoint so that it can be accessed</li>
     <li>If some content shouldn’t be available anonymously, consider leveraging the Valet Key pattern (e.g. Shared Access Signatures in Storage Accounts)</li>
+  </ul>
+  </div>
+  <div class="col">
+    <img src="images/static-content-hosting.png" />
+  </div>
+</div>
+
+---
+
+# Static Content Hosting Pattern
+
+<div class="container">
+  <div class="col">
+  Additional considerations:
+
+  <ul>
     <li>To protect the origin and minimise latency (improving performance) for end users, consider adopting a CDN in front of your static storage, which is where the clients will connect.</li>
     <li>If you are using this pattern in combination with additional compute platforms to host your application, consider the overall deployment lifecycle (additional complexity?) and dependencies between the two.</li>
   </ul>
@@ -177,6 +210,7 @@ Deploy static content to a cloud-based storage service that can deliver them dir
   </div>
 </div>
 
+{{% /section %}}
 ---
 {{< slide class="left-align" >}}
 

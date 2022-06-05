@@ -1,10 +1,11 @@
 @import "reveal-js/dist/theme/template/mixins";
 @import "reveal-js/dist/theme/template/settings";
 
-$backgroundColor: #157db9;
+$backgroundColor: #FFFFFF;
+$cwcColor: #157db9;
 
-$mainColor: #FFFFFF;
-$headingColor: #FFFFFF;
+$mainColor: #000000;
+$headingColor: #000000;
 
 $mainFontSize: 30px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
@@ -12,34 +13,160 @@ $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
-$linkColor: #FFFFFF;
+$linkColor: #000000;
 $linkColorHover: darken( $linkColor, 25% );
 $selectionBackgroundColor: darken( $linkColor, 25% );
 
-$heading1Size: 1.5em;
-$heading2Size: 1.3em;
-$heading3Size: 1.1em;
-$heading4Size: 0.9em;
+$heading1Size: 1.7em;
+$heading2Size: 1.5em;
+$heading3Size: 1.3em;
+$heading4Size: 1.1em;
 
-.reveal h1, h2, h3, h4, h5, h6 {
+.full-bg-slide > * {
+	color: #FFFFFF !important;
+}
+
+section.fullscreen {
+	height: 100%;
+	display: grid !important;
+	grid-template-areas:
+	"logo title overfill"
+	"content content content"
+	"footer footer footer";
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+
+section.fullscreen .title {
+	grid-area: title;
+	width: auto;
+	text-align: center;
+
+	color: #FFFFFF;
+	background-color: $cwcColor;
+	height: 10vh;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+section.fullscreen .title span {
+	font-weight: bold;
+}
+
+section.fullscreen .logo {
+	grid-area: logo;
+	text-align: left;
+	padding-left: 20px;
+}
+
+section.fullscreen .logo img {
+	height: 9vh;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+
+section.fullscreen .overfill {
+	grid-area: overfill;
+}
+
+section.fullscreen .logo, section.fullscreen .overfill {
+	justify-self: center;
+	color: #FFFFFF;
+	background-color: $cwcColor;
+	width: 100%;
+}
+
+section.fullscreen .content {
+	margin-top: 2vh !important;
+	grid-area: content;
+	height: 81vh;
+	margin-left: 2vw;
 	text-align: left;
 }
 
-section.left-align * {
-	text-align: left;
+section.fullscreen .flex-container {
+	display: flex;
 }
 
-section.left-align ul, section.left-align li {
-	display: inherit;
-	list-style-type: disc;
+section.fullscreen .vertical-center > * {
+	max-height: 80vh;
 }
 
-.container{
-  display: flex;
+section.fullscreen .content .vertical-center {
+	margin: auto auto;
 }
-.col {
-  flex: 1;
+
+
+section.fullscreen .footer > .footer-info span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 7vh;
 }
+
+section.fullscreen .footer > .footer-info img {
+	display: inline-block;
+	vertical-align: middle;
+	height: 5vh;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+section.fullscreen .footer a {
+	color: #FFFFFF;
+}
+
+section.fullscreen .footer {
+	grid-area: footer;
+	color: #FFFFFF;
+	background-color: $cwcColor;
+	justify-self: end;
+	height: 7vh;
+	font-size: 0.6em;
+	margin: auto;
+	align-items:center;
+	width: 100%;
+}
+
+section.fullscreen .footer > .footer-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	
+	margin-left: 20px;
+	margin-right: 120px;
+	line-height: 7vh;
+}
+
+.left-main {
+	display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". .";
+}
+
+.top-bottom {
+	display: grid;
+  grid-template-columns: 1.5fr;
+  grid-template-rows: 50% 50%;
+  grid-auto-columns: 1fr;
+  gap: 5vh;
+  grid-auto-flow: row;
+  grid-template-areas:
+		"."
+    ".";
+}
+
 
 @import "reveal-js/dist/theme/template/theme";
 
@@ -52,5 +179,3 @@ section.has-light-background {
 .reveal pre {
 	margin: 50px auto;
 }
-
-

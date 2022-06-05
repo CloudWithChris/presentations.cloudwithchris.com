@@ -1,168 +1,204 @@
 +++
 title = "GitHub - Not just a Git repository"
 outputs = ["Reveal"]
-[logo]
-src = "images/cwc-logo.png"
 [reveal_hugo]
 custom_theme = "custom-theme.scss"
 custom_theme_compile = true
 transition = "none"
 +++
 
-{{< slide class="left-align" >}}
+{{< slide background="#157db9" color="#FFFFFF" class="full-bg-slide" >}}
 
-![GitHub](images/GitHub.png)
+![GitHub](images/github.png)
 # GitHub - Not just a Git repository
 
-###### Chris Reddington | [@reddobowen](https://twitter.com/reddobowen)
+### Chris Reddington
 
 ---
 
-{{< slide id="profile" class="left-align" >}}
+{{< slide id="profile" class="fullscreen" >}}
 
-# Chris Reddington
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
 
-* Microsoft Cloud Solution Architect
-* [Cloud With Chris](https://www.cloudwithchris.com) blogger, podcaster & producer
-* [Azure Thames Valley](https://www.meetup.com/Azure-Thames-Valley/)
+<div class="title">
+  <span>Chris Reddington</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content flex-container">
 
-<br />
- 
-<div class="container">
-  <div class="col">
-    <a href="https://www.meetup.com/Azure-Thames-Valley/" style="display: flex; align-items: center; justify-content: center">
-      <div>
-        <img src="images/Meetup.png" width="50">
-      </div>
-      <div>
-        <p>Azure Thames Valley</p>
-      </div>
-    </a>
+  <div class="top-bottom vertical-center">
+    <div>
+      <ul>
+        <li><s>Microsoft Cloud Solution Architect</s></li>
+        <li>Enterprise Advocate at GitHub</li>
+        <li>Cloud With Chris blogger, podcaster & producer</li>
+        <li>Azure Thames Valley Organiser</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Follow & Subscribe</h2>
+      <ul>
+        <li><a href="https://twitter.com/reddobowen">Twitter</a></li>
+        <li><a href="https://youtube.com/c/cloudwithchris">YouTube</a></li>
+        <li><a href="https://linkedin.com/in/chrisreddington">LinkedIn</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="col">
-    <a href="https://github.com/CloudWithChris" style="display: flex; align-items: center; justify-content: center">
-      <div>
-        <img src="images/GitHub.png" width="50">
-      </div>
-      <div>
-        <p>CloudWithChris</p>
-      </div>
-    </a>
-  </div>
-  <div class="col">
-    <a href="https://youtube.com/c/CloudWithChris" style="display: flex; align-items: center; justify-content: center">
-      <div>
-        <img src="images/YouTube.png" width="50">
-      </div>
-      <div>
-        <p>CloudWithChris</p>
-      </div>
-    </a>
-  </div>
-</div><div class="container">
-  <div class="col">
-    <a href="https://twitter.com/reddobowen" style="display: flex; align-items: center; justify-content: center">
-      <div>
-        <img src="images/Twitter.png" width="50">
-      </div>
-      <div>
-        <p>@reddobowen</p>
-      </div>
-    </a>
-  </div>
-  <div class="col">
-    <a href="https://github.com/chrisreddington" style="display: flex; align-items: center; justify-content: center">
-      <div>
-        <img src="images/GitHub.png" width="50">
-      </div>
-      <div>
-        <p>ChrisReddington</p>
-      </div>
-    </a>
-  </div>
-  <div class="col">
-    <a href="https://linkedin.com/in/chrisreddington" style="display: flex; align-items: center; justify-content: center">
-      <div>
-        <img src="images/LinkedIn.png" width="50">
-      </div>
-      <div>
-        <p>Chris Reddington</p>
-      </div>
-    </a>
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
   </div>
 </div>
 
 ---
 
-{{< slide class="left-align" >}}
+{{< slide class="fullscreen" >}}
 
-# A quick poll. How is your experience with...
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
 
-<div class="container">
-  <div class="col">
+<div class="title">
+  <span>A quick poll...</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content flex-container">
+
+  <div class="vertical-center">
+  <h2>How is your experience with...</h2>
     <ul>
-      <li>Azure</li>
-      <li>GitHub</li>
-      <li>GitHub Actions</li>
-      <li>Hugo</li>
+        <li>Azure</li>
+        <li>GitHub</li>
+        <li>GitHub Actions</li>
+        <li>Hugo</li>
+    </ul>
+    <ul>
+        <li>Beginner</li>
+        <li>Intermediate</li>
+        <li>Advanced</li>
     </ul>
   </div>
-
-  <div class="col">
-    <ul>
-      <li>Beginner</li>
-      <li>Intermediate</li>
-      <li>Advanced</li>
-    </ul>
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
   </div>
 </div>
 
 ---
 
-# This talk will help you...
+{{< slide class="fullscreen" >}}
 
-- Identify some of the core features of GitHub
-- Understand the fundamental concepts of GitHub Actions
-- Locate existing samples to help you deploy to Azure
-- Understand how (and why) [cloudwithchris.com](https://www.cloudwithchris.com) is deployed using GitHub Actions
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
+
+<div class="title">
+  <span>This talk will help you...</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content flex-container">
+
+  <ul class="vertical-center">
+    <li>Identify some of the core features of GitHub</li>
+    <li>Understand the fundamental concepts of GitHub Actions</li>
+    <li>Locate existing samples to help you deploy to Azure</li>
+    <li>Understand how (and why) <a href="https://www.cloudwithchris.com">cloudwithchris.com</a> is deployed using GitHub Actions</li>
+  </ul>
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
 
 ---
 
-# A history...
+{{< slide class="fullscreen" >}}
 
-<div class="container">
-  <div class="col">
-    <img src="images/octocat-days.png" />
-  </div>
-  <div class="col">
-    <ul>
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
+
+<div class="title">
+  <span>A brief history...</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content left-main">
+  <div class="flex-container">
+    <ul class="vertical-center">
       <li><strong>2008</strong> - GitHub was Founded</li>
       <li><strong>2012</strong> - Microsoft become a significant user of GitHub</li>
       <li><strong>2018</strong> - GitHub became a subsidiary of Microsoft for $7.5 billion!</li>
       <li><strong>2019, Jan</strong> - GitHub offers unlimited private repositories to all plans, including free accounts (but up to three collaborators per repository).</li>
-    </ul>
-  </div>
-</div>
-
----
-
-# A history...
-
-<div class="container">
-  <div class="col">
-    <ul>
       <li><strong>2019, Sept</strong> - GitHub acquired Semmle, a code analysis tool.</li>
       <li><strong>2020, March</strong> - GitHub announced that they were acquiring npm</li>
       <li><strong>2020, April</strong> - The free plan allows unlimited collaborators, but limit private repos to 2000 minutes of GitHub Actions per month</li>
     </ul>
   </div>
-  <div class="col">
-    <img src="images/octocat-days.png" />
+  <div class="flex-container">
+    <img class="vertical-center" src="images/octocat-days.png" />
   </div>
-</div> 
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
 
 ---
-{{< slide class="left-align" >}}
+{{< slide class="fullscreen" >}}
 
 {{% note %}}
 We will primarily focus on these three sections. However, there is so much value in some of the other areas – e.g.
@@ -197,15 +233,41 @@ We will primarily focus on these three sections. However, there is so much value
 * **GitHub Learning Lab** - Learn new skills by completing tasks and projects directly within GitHub, guided by our friendly Learning Lab bot.
 {{% /note %}}
 
-# An extensive platform
 
-GitHub is much more than just Git repositories.
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
 
-![Screenshot from the GitHub.com website showing that GitHub is more than Git. It is Collaborative Coding, Automation & CI/CD, Security, Client Apps, Project Management, Team Administration and Community.](images/github-breadth.png "Screenshot from the GitHub.com website showing that GitHub is more than Git. It is Collaborative Coding, Automation & CI/CD, Security, Client Apps, Project Management, Team Administration and Community.")
+<div class="title">
+  <span>An extensive platform</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content flex-container">
+  <div class="vertical-center">
+    <img src="images/github-breadth.png" alt="Screenshot from the GitHub.com website showing that GitHub is more than Git. It is Collaborative Coding, Automation & CI/CD, Security, Client Apps, Project Management, Team Administration and Community." title="Screenshot from the GitHub.com website showing that GitHub is more than Git. It is Collaborative Coding, Automation & CI/CD, Security, Client Apps, Project Management, Team Administration and Community.">
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
 
 ---
 
-{{< slide class="left-align" >}}
+{{< slide class="fullscreen" >}}
 
 {{% note %}}
 ## Hugo
@@ -250,26 +312,95 @@ GitHub is much more than just Git repositories.
 
 {{% /note %}}
 
-# JAMStack (JavaScript, APIs & Markup)
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
 
-![Screenshot showing several Static Site Generators - Hugo, Jekyll, Gatsby, Vuepress, Nuxt.JS and Pelican](images/ssgs.png "Screenshot showing several Static Site Generators - Hugo, Jekyll, Gatsby, Vuepress, Nuxt.JS and Pelican")
-
+<div class="title">
+  <span>JAMStack (JavaScript, APIs & Markup)</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content flex-container">
+  <div class="vertical-center">
+    <img src="images/ssgs.png" alt="Screenshot showing several Static Site Generators - Hugo, Jekyll, Gatsby, Vuepress, Nuxt.JS and Pelican" title="Screenshot showing several Static Site Generators - Hugo, Jekyll, Gatsby, Vuepress, Nuxt.JS and Pelican">
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
 
 ---
 
-# Cloud With Chris Architecture
+{{< slide class="fullscreen" >}}
 
-<img src="images/cwc-architecture.png" alt="Architecture Diagram of cloudwithchris.com. It shows that cloudwithchris.com is on Azure DNS. There is an apex domain (cloudwithchris.com) which points to Azure Front Door, and redirects to another Azure Front Door Rule (for WWW). There is a www.cloudwithchris.com subdomain which points to a WWW rule, which directs to an Azure Static Web App. There is a podcasts.cloudwithchris.com subdomain which points to a Podcast Rule, which directs to Azure Storage. There is a presentations.cloudwithchris.com subdomain which points to a Presentations Rule, which directs to an Azure Static Web App" title="Architecture Diagram of cloudwithchris.com. It shows that cloudwithchris.com is on Azure DNS. There is an apex domain (cloudwithchris.com) which points to Azure Front Door, and redirects to another Azure Front Door Rule (for WWW). There is a www.cloudwithchris.com subdomain which points to a WWW rule, which directs to an Azure Static Web App. There is a podcasts.cloudwithchris.com subdomain which points to a Podcast Rule, which directs to Azure Storage. There is a presentations.cloudwithchris.com subdomain which points to a Presentations Rule, which directs to an Azure Static Web App" width="600">
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
+
+<div class="title">
+  <span>Cloud With Chris Architecture</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content flex-container">
+  <div class="vertical-center">
+    <img src="images/cwc-architecture.png" alt="Architecture Diagram of cloudwithchris.com. It shows that cloudwithchris.com is on Azure DNS. There is an apex domain (cloudwithchris.com) which points to Azure Front Door, and redirects to another Azure Front Door Rule (for WWW). There is a www.cloudwithchris.com subdomain which points to a WWW rule, which directs to an Azure Static Web App. There is a podcasts.cloudwithchris.com subdomain which points to a Podcast Rule, which directs to Azure Storage. There is a presentations.cloudwithchris.com subdomain which points to a Presentations Rule, which directs to an Azure Static Web App" title="Architecture Diagram of cloudwithchris.com. It shows that cloudwithchris.com is on Azure DNS. There is an apex domain (cloudwithchris.com) which points to Azure Front Door, and redirects to another Azure Front Door Rule (for WWW). There is a www.cloudwithchris.com subdomain which points to a WWW rule, which directs to an Azure Static Web App. There is a podcasts.cloudwithchris.com subdomain which points to a Podcast Rule, which directs to Azure Storage. There is a presentations.cloudwithchris.com subdomain which points to a Presentations Rule, which directs to an Azure Static Web App">
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
 
 ---
+
+{{< slide background="#157db9" color="#FFFFFF" class="full-bg-slide" >}}
+
 
 # Stop! Demo time.
 
 
 ---
 
-# GitHub Actions Workflow Schema
+{{< slide class="fullscreen" >}}
 
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
+
+<div class="title">
+  <span>GitHub Actions Workflow Schema</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content">
+{{% markdown %}}
 ```yaml{2-5|9|12,14}
 name:
   on:
@@ -291,11 +422,41 @@ jobs:
     needs: linter
   …… 
 ```
+{{% /markdown %}}
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
+
 
 ---
 
-# GitHub Actions Workflow Schema
+{{< slide class="fullscreen" >}}
 
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
+
+<div class="title">
+  <span>GitHub Actions Workflow Schema</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content">
+{{% markdown %}}
 ```yaml{3-4|9,13,17|15}
 …
 publish:  
@@ -319,16 +480,42 @@ publish:
       inlineScript: |
         az storage blob upload-batch --account-name cloudwithchrispreview -d '$web/${{ github.head_ref }}' -s 'website'
 ```
+{{% /markdown %}}
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
 
 ---
 
-{{< slide class="left-align" >}}
 
-# How to learn more...
+{{< slide class="fullscreen" >}}
 
-<div class="container">
-  <div class="col">
-    <p>
+<div class="logo">
+  <a href="https://presentations.cloudwithchris.com"><img src="images/cwc-logo.png"></a>
+</div>
+
+<div class="title">
+  <span>How to learn more</span>
+</div>
+<div class="overfill">
+</div>
+<div class="content left-main">
+
+  <div>
     <ul>
       <li><a href="https://www.cloudwithchris.com">Cloud With Chris</a></li>
       <li><a href="https://lab.github.com">GitHub Learning Labs</a></li>
@@ -336,12 +523,30 @@ publish:
     </ul>    
     <img src="images/cwc-site.png" alt="A screenshot of cloudwithchris.com, which shows several upcoming pieces of content" title="A screenshot of cloudwithchris.com, which shows several upcoming pieces of content" />
   </div>
-  <div class="col">
-    <img src="images/github-resources-follow-up.png" alt="A screenshot of GitHub Learning Lab, with a few example courses. A screenshot of Microsoft Learn, showing several example learning paths and courses" title="A screenshot of GitHub Learning Lab, with a few example courses. A screenshot of Microsoft Learn, showing several example learning paths and courses" />
+  <div>
+  <img src="images/github-resources-follow-up.png" alt="A screenshot of GitHub Learning Lab, with a few example courses. A screenshot of Microsoft Learn, showing several example learning paths and courses" title="A screenshot of GitHub Learning Lab, with a few example courses. A screenshot of Microsoft Learn, showing several example learning paths and courses" />
   </div>
-</div> 
+</div>
+<div class="footer">
+  <div class="footer-info">
+    <span>
+      <a href="https://twitter.com/reddobowen">
+        <img src="images/Twitter.png" /> @reddobowen
+      </a>
+    </span>
+    <span>
+      <a href="https://youtube.com/c/cloudwithchris">
+        <img src="images/YouTube.png" /> CloudWithChris
+      </a>
+    </span>
+  <p><a href="https://www.cloudwithchris.com">www.cloudwithchris.com</a></p>
+  <p>GitHub - Not just a Git repository</p>
+  </div>
+</div>
 
 ---
+
+{{< slide background="#157db9" color="#FFFFFF" class="full-bg-slide" >}}
 
 # Questions?
 
